@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ejercicio2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="container center">
+        <h1> Formulario de contacto</h1>
+    </header>
+    <div class="container">
+        <form id="form">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" minlength="2" maxlength="100" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="Apellido">Apellido</label>
+                <input type="text" minlength="2" maxlength="100" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="mail">Email</label>
+                <input type="email" class="form-control" id="mail" name="mail" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="Dni">Dni</label>
+                <input type="text" minlength="7" maxlength="10" class="form-control" id="Dni" name="Dni" placeholder="Dni">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono">
+            </div>
+            <div class="form-group">
+                <label for="familia">Familiares a cargo:</label>
+
+            </div>
+            <div id="familiares">
+                <div class="form-inline">
+                    <div class="form-group" id="caja1">
+                        <label for="nom"> Nombre </label>
+                        <input type="text" minlength="2" maxlength="100" class="form-control" id="nom" name="nom" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group" id="caja2">
+                            <label for="ape">Apellido</label>
+                            <input type="text" minlength="2" maxlength="100" class="form-control" id="ape" name="ape" placeholder="Apellido" required>
+                    </div>
+                    <div class="form-group" id="caja3">
+                        <label for="option">Relacion </label>
+                        <select class="form-control" name="option" id="option" required>
+                            <option value=""> Seleccione.. </option>
+                            <option value="1"> Madre </option>
+                            <option value="2"> Padre </option>
+                            <option value="3"> Hermano </option>
+                            <option value="4"> Tio </option>
+                            <option value="5"> Sobrino </option>
+                            <option value="6"> Nieto </option>
+                        </select>
+                    </div>            
+                </div>
+            </div>
+            <button type="button" onclick="Formulario.agregarFamiliar();" class="btn btn-default">Agregar Familiar</button>
+            <button type="button" id="btnQuitarFamiliar" onclick="Formulario.quitarFamiliar();" class="btn btn-danger" style="display:none;">Quitar Familiar</button>
+            <br></br>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/toastr.min.js"></script>
+    <script src="js/jquery.blockui.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.validate.language.es.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/formulario.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log('el documento ya esta listo');
+            Formulario.init();
+            
+        });
+
+
+    </script>
+  </body>
+</html>
