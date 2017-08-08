@@ -1,0 +1,43 @@
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: black;
+    background-image: url('../image/ecobus.jpg');
+    background-position: 0% 84%;
+    background-size: cover;
+}
+h1,h2,h3{
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-default {
+    background-color: #333;
+    border-color: #080808;
+    margin-bottom: 0px;
+}
+.navbar-default .navbar-nav>.active>a{
+    color: #eee;
+    background-color: #333;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #ddd;
+}
+.navbar-default .navbar-brand {
+    color: #ddd;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #ddd;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #555;
+    background-color: #eee;
+}
+body>footer {
+    width: 100%;
+    padding: 30px 0;
+    color: white;
+    text-align: center;
+    background-color: black;
+    border-top: 1px solid #e5e5e5;
+}
